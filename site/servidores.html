@@ -16,13 +16,13 @@
 <body>
     <header>  
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"><img src="imagens/oie_transparent.png"></a>            
+            <a class="navbar-brand" href="projeto_interface.html"><img src="imagens/oie_transparent.png"></a>            
             <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="navbar-collapse collapse" id="navbarNavDropdown" style>
                 <div class="navbar-nav">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link active" href="projeto_interface.html">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="#">Quem Somos</a>
                     <a class="nav-item nav-link" href="#">Contato</a>
                     <a class="nav-item nav-link" href="#">Sobre o Site</a>
@@ -32,20 +32,42 @@
     </header>
 
     <div class="background-branco">
-        <div class="container">
-            <div>
-                <h1>Servidores Públicos</h1>
-                <p>Consulte dados referentes a folha de pagamento dos servidores municipais:</p>
+        <div class="container pt-4">
+            <div class="row">
+                <div class="col-1 p-0 text-center">
+                    <i class="fa fa-users fa-5x py-3" aria-hidden="true"></i>
+                </div>
+                <div class="col-6 pt-2">
+                    <h1>Servidores Públicos</h1>
+                    <p>Consulte dados referentes a folha de pagamento dos servidores municipais:</p>
+                </div>
             </div>
+           
             <div class="pesquisa">
                 <p>Pesquisar por:<p>
-                <table>
-                    <tr>
-                        <td class="px-3"><input type="submit" value="Nome" class="btn-pesquisa"></td>
-                        <td class="px-3"><input type="submit" value="Cargo" class="btn-pesquisa"></td>
-                        <td class="px-3"><input type="submit" value="Salário" class="btn-pesquisa"></td>
-                    </tr>
-                </table>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="pesquisaServidor" id="pesquisaServidor1" value="option1" checked>
+                    <label class="form-check-label" for="pesquisaServidor1">
+                        Nome
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="pesquisaServidor" id="pesquisaServidor2" value="option2">
+                    <label class="form-check-label" for="pesquisaServidor2">
+                        Cargo
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="pesquisaServidor" id="pesquisaServidor3" value="option3">
+                    <label class="form-check-label" for="pesquisaServidor3">
+                        Salário
+                    </label>                    
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10 my-4">
+                        <button type="submit" class="btn btn-outline-succes">Pesquisar</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
