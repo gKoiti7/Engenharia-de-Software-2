@@ -11,7 +11,7 @@ conexão = pymysql.connect(
     host = 'localhost',
     user = 'root',
     passwd = '',
-    database = 'transparencia'
+    database = 'servidores'
 )
 
 cursor = conexão.cursor()
@@ -21,12 +21,16 @@ url = "http://www.transparencia.pmmc.com.br/funcionalismopublico/salarios"
 
 option = Options()
 option.headless = True
-driver = webdriver.Chrome()  #options=option
+driver = webdriver.Chrome(  options=option)
 
 driver.get(url)
-time.sleep(8)
+time.sleep(2)
+element = driver.find_element_by_xpath("//ul[@class='pagination']/li[8]/a")
+html_content = element.get_attribute('outerHTML')
+soup = BeautifulSoup(html_content, 'html.parser')
+contador3 = int(soup.a.string)
 
-for i in range(1, 578):
+for i in range(0, contador3 ):
     element = driver.find_element_by_xpath("/html/body/div[2]/div/div[1]/div/div/div[1]/form/div/div[2]/div[2]/div/table")
 
     html_content = element.get_attribute('outerHTML')
@@ -41,7 +45,7 @@ for i in range(1, 578):
     servidores[i] = df.to_dict('records')
 
     driver.find_element_by_css_selector("#tbFuncionarios_next > a").click()
-    time.sleep(1)
+    time.sleep(0.01)
 
 driver.quit()
 
@@ -58,9 +62,12 @@ with open('salarios.json','r') as arq:
 servidores = list(obj.values())
 
 # subir para o bd
-for x in range(0, 577):
+for x in range(0, contador3):
     for y in range(0, 10):
-        servlist = list(servidores[x][y].values())
-        sql = "INSERT INTO servidores(nome, cargo, salario) VALUES(%s,%s,%s)"
-        cursor.execute(sql, servlist)
-        conexão.commit()
+        try:
+            servlist = list(servidores[x][y].values())
+            sql = "INSERT INTO transparencia(Nome, Cargo, Salario) VALUES(%s,%s,%s)"
+            cursor.execute(sql, servlist)
+            conexão.commit()
+        except:
+            print("concluido")
