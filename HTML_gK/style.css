@@ -1,0 +1,91 @@
+/*Arquivo CSS*/
+/*A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z*/
+
+/*Tags*/
+*{
+	font-family:Arial;
+	margin:0;
+	padding:0;	
+}
+
+header{
+	background-color:white;
+	height:40px;
+	padding:10px;
+}
+
+body{
+	background-color:white;
+	color:black;
+	font-size:15px;
+	text-shadow:1px 1px 1px gray;
+}
+
+footer{
+	/*Safari,Chrome*/
+	background-image:-webkit-linear-gradient(#35b8b0,#00DC7D);
+	/*Firefox*/
+	background-image:-moz-linear-gradient(#35b8b0,#00DC7D);
+	/*Opera*/
+	background-image:-o-linear-gradient(#35b8b0,#00DC7D);
+	clear:both;
+	height:30px;
+	padding:10px;
+	text-align:center;
+	font-family:Arial;
+}
+
+h1{
+	color:black;
+	font-family:Arial;
+	text-align:center;
+	padding:10px;
+}
+
+p{
+	color:white;
+	font-family:Arial;
+}
+	
+/*IDs*/
+#principal{
+	background-image:url('cidade.jpg');
+	background-size:100%;
+	min-height:500px;
+	padding:10px;
+	clear:both;
+}
+
+#logo{
+	float:left;
+}
+
+#menu{
+	float:right;
+	margin-top:10px;
+}
+
+#menu a{
+	font-family:Arial;
+	text-decoration:none;
+	color:black;
+	text-shadow:1px 1px 1px gray;
+	padding:10px 30px;
+}
+
+#menu a:hover{
+	background-color:#35b8b0;
+	-webkit-transition:1s;
+}
+
+/*Class*/
+.container{
+	margin:0 auto;
+	width:960px;
+}
+
+.efeito{
+	background-color:rgba(0,0,0,0.3);
+	padding:20px;
+	border-radius:20px;
+}
