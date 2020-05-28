@@ -51,7 +51,7 @@ p{
 #principal{
 	background-image:url('cidade.jpg');
 	background-size:100%;
-	min-height:500px;
+	min-height:400px;
 	padding:10px;
 	clear:both;
 }
@@ -80,8 +80,8 @@ p{
 
 /*Class*/
 .container{
-	margin:0 auto;
-	width:960px;
+	margin:auto;
+	width:800px;
 }
 
 .efeito{
