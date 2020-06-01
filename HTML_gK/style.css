@@ -1,5 +1,4 @@
 /*Arquivo CSS*/
-/*A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z*/
 
 /*Tags*/
 *{
@@ -37,11 +36,18 @@ footer{
 
 h1{
 	color:black;
-	font-family:Arial;
+	font-family:Didot,Arial;
 	text-align:center;
 	padding:10px;
 }
 
+h2{
+	color:black;
+	font-family:Didot,Arial;
+	text-align:center;
+	padding:10px;
+}
+	
 p{
 	color:white;
 	font-family:Arial;
@@ -51,9 +57,55 @@ p{
 #principal{
 	background-image:url('cidade.jpg');
 	background-size:100%;
-	min-height:400px;
+	min-height:500px;
 	padding:10px;
 	clear:both;
+}
+
+#Gustavo{
+	/*Safari,Chrome*/
+	background-image:-webkit-linear-gradient(red,white);
+	/*Firefox*/
+	background-image:-moz-linear-gradient(red,white);
+	/*Opera*/
+	background-image:-o-linear-gradient(red,white);
+	padding:10px;
+	display:inline-block;
+	padding:7px;
+	width:32%;
+	border-radius:10px;
+}
+
+#Rafael{
+	/*Safari,Chrome*/
+	background-image:-webkit-linear-gradient(green,white);
+	/*Firefox*/
+	background-image:-moz-linear-gradient(green,white);
+	/*Opera*/
+	background-image:-o-linear-gradient(green,white);
+	padding:10px;
+	display:inline-block;
+	padding:7px;
+	width:32%;
+	border-radius:10px;
+}
+
+#Luciano{
+	/*Safari,Chrome*/
+	background-image:-webkit-linear-gradient(pink,white);
+	/*Firefox*/
+	background-image:-moz-linear-gradient(pink,white);
+	/*Opera*/
+	background-image:-o-linear-gradient(pink,white);
+	padding:10px;
+	display:inline-block;
+	padding:7px;
+	width:32%;
+	border-radius:10px;
+}
+
+#alinhamento{
+	margin:0 auto;
 }
 
 #logo{
@@ -80,7 +132,7 @@ p{
 
 /*Class*/
 .container{
-	margin:auto;
+	margin:0 auto;
 	width:800px;
 }
 
@@ -89,3 +141,9 @@ p{
 	padding:20px;
 	border-radius:20px;
 }
+
+/*PHP*/
+span.texto{
+				font-size:<?php echo $tam;?>;
+				color:<?php echo $cor;?>;
+			}
