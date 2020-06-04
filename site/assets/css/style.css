@@ -2,7 +2,6 @@
 
 body{
     font-family: 'Roboto';
-    background-color: #f8f9fa;
 }
 a{
     text-decoration: none;
@@ -48,9 +47,14 @@ a:hover{
 .link-icone:hover{
     color: green;
 }
+footer{
+  background-color: #f8f9fa;
+}
 .texto-footer{
     font-size: 12px;
 }
+
+
 
 /* =========================== */
 
