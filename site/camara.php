@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,32 +10,42 @@
                 <h1>De Olho na Câmara</h1>
                 <p>Consulte os projetos de lei :</p>
             </div>
-            <div class="pesquisa">
-                <p>Pesquisar por:<p>
+
+            <form method="post" action="listarcamara.php" id="myForm">
+                <p>Pesquisar por:</p>
+                <p>- Autor:</p>
                 <div class="form-check ml-5">
-                    <input class="form-check-input" type="radio" name="pesquisaServidor" id="pesquisaServidor1" value="option1" checked>
+                    <input class="form-check-input" type="radio" name="pesquisa-camara" id="ascendente" value="0" checked>
                     <label class="form-check-label" for="pesquisaServidor1">
-                        Autor
+                        Nome (A-Z)
                     </label>
                 </div>
                 <div class="form-check ml-5">
-                    <input class="form-check-input" type="radio" name="pesquisaServidor" id="pesquisaServidor2" value="option2">
+                    <input class="form-check-input" type="radio" name="pesquisa-camara" id="descendente" value="1">
                     <label class="form-check-label" for="pesquisaServidor2">
-                        Assunto
+                        Nome (Z-A)
+                    </label>
+                </div>
+                <br>
+                <p>- Número do Projeto:</p>
+                <div class="form-check ml-5">
+                    <input class="form-check-input" type="radio" name="pesquisa-camara" id="ascendente" value="2">
+                    <label class="form-check-label" for="pesquisaServidor1">
+                        Mais Recente
                     </label>
                 </div>
                 <div class="form-check ml-5">
-                    <input class="form-check-input" type="radio" name="pesquisaServidor" id="pesquisaServidor3" value="option3">
-                    <label class="form-check-label" for="pesquisaServidor3">
-                        Anotação
-                    </label>                    
+                    <input class="form-check-input" type="radio" name="pesquisa-camara" id="descendente" value="3">
+                    <label class="form-check-label" for="pesquisaServidor2">
+                        Mais Antigo
+                    </label>
                 </div>
                 <div class="form-group row">
                     <div class="col-sm-10 my-4">
-                        <button type="submit" class="btn btn-outline-succes ml-5">Pesquisar</button>
+                        <input type="submit" class="btn btn-outline-succes ml-5" value="Pesquisar">
                     </div>
                 </div>
-            </div>
+            </form>    
         </div>
     </div>
 
