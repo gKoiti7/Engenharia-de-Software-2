@@ -3,7 +3,7 @@
 
 	<head>
 		<meta charset="utf-8">
-		<title>Fale Conosco</title>
+		<title>Feedback</title>
 		<link rel="stylesheet" type="text/css" href="style.css"/>
 		<link rel="shortcut icon" href="logo.png" sizes="32x32" type="image/png">
 	</head>
@@ -20,66 +20,65 @@
 					<a href="index.html">Home</a>
 					<a href="criadores.html">Sobre os desenvolvedores</a>
 					<a href="#">Serviços</a>
-					<a href="fale_conosco.html">Fale conosco</a>
+					<a href="fale_conosco.html">Feedback</a>
 				</div>
 			</div>
 		</header>
 		
 		<!--Conteúdo-->
-	<div id="principal"> 
-		<form method="get" action="01valor.php">
-			Dia da semana:
-			<input type="number" name="ds" min="2" max="8" required=""/>
-			<input type="submit" value="Analisar"/><br/>
+		<div id="fale_conosco">
+			<div class="container">
+				<h1>Feedback</h1>
 				
-			Número:
-			<input type="number" name="num"/><br/>
-			<fieldset><legend>Operação</legend>
-				<input type="radio" name="oper" value="1" id="dobro"/>
-				<label for="dobro">Dobro</label>
-				<input type="radio" name="oper" value="2" id="cubo"/>
-				<label for="cubo">Cubo</label>
-				<input type="radio" name="oper" value="3" id="raiz"/>
-				<label for="raiz">Raiz Quadrada</label>
-			</fieldset>
-			<input type="submit" value="Calcular"/><br/>
+				<div class="efeito">
+					<p>
+						Esta seção do site é destinada a ter uma maior interação com nossos visitantes. Sinta-se livre em nos mandar uma avaliação do site e do conteúdo em geral! Sua ajuda nos permitirá a aprimorar ainda mais nossos serviços.
+					</p>
+				</div>
+				</br>
+				<div class="efeito">
+					<p>
+						<h4>Observação: O envio dos dados não é obrigatório.</h4>
+					</p>
+				</div>
+				</br>
+				<div class="envio">
+					<form method="get" action="01valor.php">
+						Nome:
+						<input type="text" placeholder="Digite seu nome" name="nome"/></br>
+						<br/>
+						Ano de Nascimento:
+						<input type="number" placeholder="Digite o ano" name="nascimento"/></br>
+						<br/>
+						E-mail para contato:
+						<input type="text" placeholder="Digite seu e-mail" name="e-mail"/></br>
+						<br/>
 					
-			Ano de nascimento:
-			<input type="number" placeholder="4 dígitos" name="ano"/>
-			<input type="submit" value="Verificar"/><br/>
-					
-			Nome:
-			<input type="text" name="nome"/><br/>
-			Ano de Nascimento:
-			<input type"number" name="ano"/><br/>
-			<fieldset><legend>Sexo</legend>
-				<input type="radio" name="sexo" id="masc" value="homem"/>
-				<label for="masc">Masculino</label><br/>
-				<input type="radio" name="sexo" id="fem" value="mulher"/>
-				<label for="fem">Feminino</label>
-			<fielset><br/>
-			<input type="submit" value="Enviar"/>
-				
-		</form>
-		<div>
-			<form method="get" action="01valor.php">
-				<label for="itxt">Texto:</label>
-				<input type="text" name="t" id="itxt"/><br/>
-				<label for="itam">Tamanho:</label>
-				<select name="tam" id="itam">
-					<option value="8pt">8</option>
-					<option value="10pt">10</option>
-					<option value ="14pt" selected>14</option>
-					<option value="20pt">20</option>
-					<option value="40pt">40</option>
-				</select><br/>
-				<label for="icor">Cor:</label>
-				<input type="color" name="cor" id="icor"/><br/>
-				<input type="submit" value="Gerar"/>
-			</form>
+						<p>
+							<h4>Avalie nosso site com base em sua experiência com a interface e a qualidade das informações apresentadas:</h4>
+						</p>
+						
+						<br/>
+						<fieldset><legend>Avaliação</legend>
+							<input type="radio" name="aval" value="1" id="otimo"/>
+								<label for="otimo">Ótimo</label>
+							<input type="radio" name="aval" value="2" id="bom"/>
+								<label for="bom">Bom</label>
+							<input type="radio" name="aval" value="3" id="mediano"/>
+								<label for="mediano">Mediano</label>
+							<input type="radio" name="aval" value="4" id="ruim"/>
+								<label for="ruim">Ruim</label>
+							<input type="radio" name="aval" value="5" id="pessimo"/>
+								<label for="pessimo">Péssimo</label>
+						</fieldset>
+						<br/>
+						<input type="submit" value="Enviar dados"/>
+						<br/>
+					</form>
+				</div>
+			</div>	
 		</div>
-	</div>
-			
+		
 		<!--Rodapé-->
 		<footer>
 			Desenvolvido por:
