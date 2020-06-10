@@ -18,9 +18,9 @@
 				
 				<div id="menu">
 					<a href="index.html">Home</a>
-					<a href="criadores.html">Sobre os desenvolvedores</a>
-					<a href="#">Serviços</a>
-					<a href="fale_conosco.html">Feedback</a>
+					<a href="criadores.html">Desenvolvedores</a>
+					<a href="listar.php">Servidores Públicos</a>
+					<a href="fale_conosco.html">Avalie o site</a>
 				</div>
 			</div>
 		</header>
