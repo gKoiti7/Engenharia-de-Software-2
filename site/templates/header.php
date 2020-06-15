@@ -1,6 +1,7 @@
 <head>
     <title>De Olho Mogi das Cruzes</title>
     <meta charset="utf-8">
+    <link rel="shortcut icon" href="assets/imagens/logoshortcut.png" sizes="32x32" type="image/png">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/components/navbar/">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
