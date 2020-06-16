@@ -23,7 +23,7 @@
 					<a href="index.html">Home</a>
 					<a href="criadores.html">Desenvolvedores</a>
 					<a href="listar.php">Servidores Públicos</a>
-					<a href="fale_conosco.html">Avalie o site</a>
+					<a href="fale_conosco.php">Avalie o site</a>
 				</div>
 			</div>
 		</header>
@@ -45,7 +45,7 @@
 					$pagina=(!empty($pagina_atual))?$pagina_atual:1;
 					
 					//Configurar a quantidade de itens por página
-					$qnt_result_pag=3;
+					$qnt_result_pag=20;
 					
 					//Calcular o início da visualização
 					$inicio=($qnt_result_pag * $pagina)-$qnt_result_pag;
@@ -70,7 +70,7 @@
 					//Limitar os links antes e depois
 					echo "</br>";
 					
-					$max_links=2;
+					$max_links=4;
 					
 					echo " <a href='listar.php?pagina=1'>Primeira</a> ";
 					
