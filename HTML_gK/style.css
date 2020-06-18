@@ -59,8 +59,7 @@ p{
 	
 /*IDs*/
 #principal{
-	background-image:url('cidade.jpg');
-	background-size:100%;
+	background-color:white;
 	min-height:500px;
 	padding:10px;
 	clear:both;

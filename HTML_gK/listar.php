@@ -20,7 +20,7 @@
 				</div>
 				
 				<div id="menu">
-					<a href="index.html">Home</a>
+					<a href="index.php">Home</a>
 					<a href="criadores.html">Desenvolvedores</a>
 					<a href="listar.php">Servidores Públicos</a>
 					<a href="fale_conosco.php">Avalie o site</a>
@@ -38,6 +38,20 @@
 					</p>
 				</div>
 				</br>
+				<h2>Servidor com maior salário</h2>
+				<div class="efeito">
+					<?php
+						$maior_salario="SELECT * FROM transparencia ORDER BY Salario DESC";
+						$resultado_maior_salario=mysqli_query($conn, $maior_salario);
+						$ler_maior_salario=mysqli_fetch_assoc($resultado_maior_salario);
+						echo "Nome do servidor: ".$ler_maior_salario['Nome'];
+						echo "</br>";
+						echo "Função do servidor: ".$ler_maior_salario['Cargo'];
+						echo "</br>";
+						echo "Salário do servidor: R$".$ler_maior_salario['Salario'];
+					?>
+				</div>
+				</br>
 				<div class="efeito">
 				<?php
 					//Receber o número da página
@@ -50,8 +64,10 @@
 					//Calcular o início da visualização
 					$inicio=($qnt_result_pag * $pagina)-$qnt_result_pag;
 					
+					$filtro=isset($_GET["ordenar"])?$_GET["ordenar"]:"Nome";
+									
 					//Puxando registros do banco de dados
-					$result_transparencia="SELECT * FROM transparencia ORDER BY Nome LIMIT $inicio,$qnt_result_pag";
+					$result_transparencia="SELECT * FROM transparencia ORDER BY $filtro LIMIT $inicio,$qnt_result_pag";
 					$resultado_transparencia=mysqli_query($conn, $result_transparencia);
 					
 						while($row_transparencia=mysqli_fetch_assoc($resultado_transparencia)){

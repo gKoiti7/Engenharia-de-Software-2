@@ -20,7 +20,7 @@
 				</div>
 				
 				<div id="menu">
-					<a href="index.html">Home</a>
+					<a href="index.php">Home</a>
 					<a href="criadores.html">Desenvolvedores</a>
 					<a href="listar.php">Servidores Públicos</a>
 					<a href="fale_conosco.php">Avalie o site</a>
