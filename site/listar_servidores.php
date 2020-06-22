@@ -1,5 +1,4 @@
 <?php
-header('Content-type: text/html; charset=iso-8859-1');
 include('conexao.php');
 
 $pagina = filter_input(INPUT_POST, 'pagina', FILTER_SANITIZE_NUMBER_INT);
@@ -40,7 +39,15 @@ if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
         <tr>
             <th><?php echo $row_usuario['nome'];?></th>
             <th><?php echo $row_usuario['cargo'];?></th>
-            <th><?php echo $row_usuario['salario'];?></th>
+            <th><?php 
+                if(strlen($row_usuario['salario']) >= 7){
+                    echo substr_replace($row_usuario['salario'], ',', -2, 0);
+                }elseif(strlen($row_usuario['salario']) == 6){
+                    echo substr_replace($row_usuario['salario'], ',', -1, 0);
+                }else{
+                    echo $row_usuario['salario'];
+                }
+                ?></th>
         </tr>
         <?php
     }?>

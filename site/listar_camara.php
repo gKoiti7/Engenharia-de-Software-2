@@ -1,5 +1,4 @@
 <?php
-header('Content-type: text/html; charset=iso-8859-1');
 include('conexao.php');
 
 $pagina = filter_input(INPUT_POST, 'pagina', FILTER_SANITIZE_NUMBER_INT);

@@ -14,7 +14,7 @@
         ?>
 
         <script>
-            var qnt_result_pg = 10; //qtdad de registros por página
+            var qnt_result_pg = 20; //qtdad de registros por página
             var pagina = 1; //pagina inicial
             var ordem = "<?php echo $result; ?>";
             var area = "<?php echo $area; ?>";
