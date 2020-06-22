@@ -1,14 +1,16 @@
 <?php
 
-class Camara extends Conexao{
+class Servidor extends Conexao{
 
-    private $assunto;
-    private $anotacao;
+    private $rgf;
+    private $nome;
+    private $cargo;
+    private $salario;
     private $conexao;
 
     public function querySelect(){        
         $this->conexao = $this->conectar();        
-        $query_dados = "SELECT * FROM projetos_camara";
+        $query_dados = "SELECT * FROM servidores_prefeitura";
         $resultado_dados = $this->conexao->prepare($query_dados);
         $resultado_dados->execute();
         $resultado = $resultado_dados->fetchAll();
@@ -22,42 +24,75 @@ class Camara extends Conexao{
 
     public function listar($nome, $ordem, $inicio, $qnt_result_pg){        
         $this->conexao = $this->conectar();        
-        $query_dados = "SELECT * FROM projetos_camara ORDER BY $nome $ordem LIMIT $inicio, $qnt_result_pg";
+        $query_dados = "SELECT * FROM servidores_prefeitura ORDER BY $nome $ordem LIMIT $inicio, $qnt_result_pg";
         $resultado_dados = $this->conexao->prepare($query_dados);
         $resultado_dados->execute();
         $resultado = $resultado_dados->fetchAll();
         return $resultado;
     }
-
-    public function getAssunto()
+    
+    public function getRgf()
     {
-        return $this->assunto;
+        return $this->rgf;
     }
 
-    public function setAssunto($assunto)
+    
+    public function setRgf($rgf)
     {
-        $this->assunto = $assunto;
+        $this->rgf = $rgf;
 
         return $this;
     }
 
-    public function getAnotacao()
+     
+    public function getNome()
     {
-        return $this->anotacao;
+        return $this->nome;
     }
 
-    public function setAnotacao($anotacao)
+    
+    public function setNome($nome)
     {
-        $this->anotacao = $anotacao;
+        $this->nome = $nome;
 
         return $this;
     }
- 
+
+    
+    public function getCargo()
+    {
+        return $this->cargo;
+    }
+
+    
+    public function setCargo($cargo)
+    {
+        $this->cargo = $cargo;
+
+        return $this;
+    }
+
+    
+    public function getSalario()
+    {
+        return $this->salario;
+    }
+
+    
+    public function setSalario($salario)
+    {
+        $this->salario = $salario;
+
+        return $this;
+    }
+
+    
     public function getConexao()
     {
         return $this->conexao;
     }
 
+    
     public function setConexao($conexao)
     {
         $this->conexao = $conexao;
@@ -65,3 +100,5 @@ class Camara extends Conexao{
         return $this;
     }
 }
+
+?>

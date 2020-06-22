@@ -38,7 +38,7 @@
 
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 pt-3">
                     <div class="content">
-                        <a href="servidores.php">
+                        <a href="pesquisa_servidores.php">
                             <i class="fa fa-users fa-5x py-3" aria-hidden="true"></i>
                             <h2 class="pb-3">Servidores Públicos</h2>
                             <p>Folha de Pagamento e Gastos com servidores públicos</p>
@@ -48,7 +48,7 @@
 
                 <div class="col-12 col-sm-6 col-md-6 col-lg-3 pt-3">
                     <div class="content">
-                        <a href="camara.php">
+                        <a href="pesquisa_camara.php">
                             <i class="fa fa-university fa-5x py-3" aria-hidden="true"></i>
                             <h2 class="pb-3">De Olho na Câmara</h2>
                             <p>Acompanhe os projetos apresentados pelos vereadores e seus votos nas sessões da Câmara</p>
