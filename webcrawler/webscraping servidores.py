@@ -71,7 +71,5 @@ for x in range(0, cont):
             sql = "INSERT INTO servidores(nome, cargo, salario) VALUES(%s,%s,%s)"
             cursor.execute(sql, servlist)
             conexão.commit()
-        except:
-            exit
-            
-print("concluido")
+        except:   
+            print("concluido")
