@@ -1,105 +1,74 @@
-<?php
-	include_once("conexao.php");
-	
-	$meses = array();
-	$valores = array();
-	$i = 0;
-
-	//Buscar dados no banco de dados servidores
-	$result_transparencia="SELECT * FROM transparencia";
-	$resultado_transparencia=mysqli_query($conn, $result_transparencia);
-	//Guardar dados na string
-	while($row_transparencia=mysqli_fetch_assoc($resultado_transparencia)){
-		$meses[$i] = $row_transparencia['Nome'];
-		$valores[$i] = $row_transparencia['Salario'];
-		$i = $i + 1;
-	}
-?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
-	<head>
-		<meta charset="utf-8">
-		<title>De Olho Mogi</title>
-		<link rel="stylesheet" type="text/css" href="style.css"/>
-		<link rel="shortcut icon" href="logo.png" sizes="32x32" type="image/png">
-		<script type="text/javascript" src="https://www.google.com/jsapi"></script>    
-		<script type="text/javascript">
-		google.charts.load("current", {packages:["corechart"]});
-		//google.load('visualization', '1', {'packages':['corechart']});
-		google.setOnLoadCallback(desenhaGrafico);
- 
-	function desenhaGrafico() {
-  
-		var data = new google.visualization.DataTable();
+    <?php
+		include('templates/header.php');
+	?>
+
+    <div id="fundo-mogi" class= "img-mogi img-fluid background-branco">
+	
+        <div class="container justify-content-center align-items-center text-center">
+            <div class="row ">
+                <div class="col-12 py-5 text-center">
+                    <p class="titulo-mogi">De Olho Mogi das Cruzes</p>
+                </div>
+            </div>
+        </div>
 		
-		data.addColumn('string', 'Servidores');
-		data.addColumn('number', 'Salário em R$');
-   
-		data.addRows(<?php echo $i ?>);
-  
-		<?php
-		$k = $i;
+    </div>
+
+    <div class="menu-body py-5 background-branco">
 	
-		for ($i = 0; $i < $k; $i++) {
-		?>
-	
-		data.setValue(<?php echo $i ?>, 0, '<?php echo $meses[$i] ?>');
-		data.setValue(<?php echo $i ?>, 1, <?php echo $valores[$i] ?>);
-	
-		<?php
-		}
-		?>
-  
-		var options = {
-			title: 'Gráfico: Salários dos servidores públicos',
-			width: 1400, height: 900,
-			colors: ['blue'],
-			legend: { position: 'bottom' },
-			curveType: 'function'
-		};
-  
-		// cria grafico
-		//var chart = new google.visualization.arrayToDataTable(document.getElementById('chart_div'));
-		var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-		// desenha grafico 
-		chart.draw(data, options);
-	}
-	</script>
-	</head>
-	
-	<body>
-		<!--Cabeçalho-->
-		<header>
-			<div class="container">
-				<div id="logo">
-					<img src="logo.png"/ height=40px>
-				</div>
-				
-				<div id="menu">
-					<a href="index.php">Home</a>
-					<a href="criadores.html">Desenvolvedores</a>
-					<a href="listar.php">Servidores Públicos</a>
-					<a href="fale_conosco.php">Avalie o site</a>
-				</div>
-			</div>
-		</header>
-		
-		<!--Conteúdo--> 
-			<div class="container">
-				<h1>Bem-vindo a página De Olho Mogi</h1>
-			</div>
-		<center>
-			<div id="chart_div"></div>
-		</center>
+        <div class="container">
+            <div class="row text-center">
 			
-		<!--Rodapé-->
-		<footer>
-			Desenvolvido por:
-			Gustavo Koiti Kuwabata/
-			Luciano de Almeida/
-			Raphael Rugna<br>
-			Fatec MC 2020
-		</footer>
-	</body>
+				<div class="col-12 col-sm-6 col-md-6 col-lg-3 pt-3">
+                    <div class="content">
+                        <a href="#">
+                            <i class="fa fa-line-chart fa-5x py-3" aria-hidden="true"></i>
+                            <h2 class="pb-3">Receitas e Despesas</h2>
+                            <p>Saiba como estão sendo gastos os Recursos Públicos pela Prefeitura</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 pt-3">
+                    <div class="content">
+                        <a href="pesquisa_servidores.php">
+                            <i class="fa fa-users fa-5x py-3" aria-hidden="true"></i>
+                            <h2 class="pb-3">Servidores Públicos</h2>
+                            <p>Folha de Pagamento e Gastos com servidores públicos</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 pt-3">
+                    <div class="content">
+                        <a href="pesquisa_camara.php">
+                            <i class="fa fa-university fa-5x py-3" aria-hidden="true"></i>
+                            <h2 class="pb-3">De Olho na Câmara</h2>
+                            <p>Acompanhe os projetos apresentados pelos vereadores e seus votos nas sessões da Câmara</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 pt-3">
+                    <div class="content">
+                        <a href="#">
+                            <i class="fa fa-building fa-5x py-3" aria-hidden="true"></i>
+                            <h2 class="pb-3">Obras <br> Públicas</h2>
+                            <p>Informações sobre Obras Públicas, custos e origem de recursos</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+		
+    </div>
+    
+    <?php
+		include('templates/footer.php');
+	?>
+
 </html>

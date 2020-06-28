@@ -36,10 +36,10 @@
 
 	if(mysqli_insert_id($conn)){
 		$_SESSION['msg'] = "<p style='color:green;'>Avaliação cadastrada com sucesso</p>";
-	header("Location: fale_conosco.php");
+	header("Location: contato.php");
 	}
 	else{
 		$_SESSION['msg'] = "<p style='color:red;'>Avaliação não cadastrada com sucesso</p>";
-	header("Location: fale_conosco.php");
+	header("Location: contato.php");
 	}
 ?>
