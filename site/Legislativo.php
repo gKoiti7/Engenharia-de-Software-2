@@ -1,10 +1,11 @@
 <?php
 
-class Legislativo extends Servidor{
+class Legislativo{
 
     private $projeto;
     private $assunto;
     private $anotacao;
+    private $Servidor; // Associação
 
  
     public function getProjeto()
@@ -39,6 +40,18 @@ class Legislativo extends Servidor{
     public function setAnotacao($anotacao)
     {
         $this->anotacao = $anotacao;
+
+        return $this;
+    }
+ 
+    public function getServidor()
+    {
+        return $this->Servidor;
+    }
+
+    public function setServidor($Servidor)
+    {
+        $this->Servidor = $Servidor;
 
         return $this;
     }
