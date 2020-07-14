@@ -43,7 +43,7 @@ class Servidor extends Funcionario{
                 $this->setRgf($rows_pesquisa['RGF']);
                 $this->setNome($rows_pesquisa['Nome']);  
                 $this->setCargo($rows_pesquisa['Cargo']); 
-                $this->setSalario($rows_pesquisa['SalarioJun2020']);    
+                $this->setSalario(number_format($rows_pesquisa['SalarioJun2020'], 2, ",", "."));    
                     echo "<tr>";
                         echo "<th>" . $this->getRgf() . "</th>";
                         echo "<th>" . $this->getNome() . "</th>";
