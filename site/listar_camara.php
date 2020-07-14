@@ -14,16 +14,10 @@ $inicio = ($pagina * $qnt_result_pg) - $qnt_result_pg;
 //consultar no BD
 
 if($ordem == 0){
-    $result_usuario = "SELECT * FROM camara ORDER BY Nome ASC LIMIT $inicio, $qnt_result_pg";
+    $result_usuario = "SELECT * FROM projetos ORDER BY Nome ASC LIMIT $inicio, $qnt_result_pg";
     $resultado_usuario = mysqli_query($conn, $result_usuario);
 }elseif($ordem == 1){
-    $result_usuario = "SELECT * FROM camara ORDER BY Nome DESC LIMIT $inicio, $qnt_result_pg";
-    $resultado_usuario = mysqli_query($conn, $result_usuario);
-}elseif($ordem == 2){
-    $result_usuario = "SELECT * FROM camara ORDER BY id ASC LIMIT $inicio, $qnt_result_pg";
-    $resultado_usuario = mysqli_query($conn, $result_usuario);
-}else{
-    $result_usuario = "SELECT * FROM camara ORDER BY id DESC LIMIT $inicio, $qnt_result_pg";
+    $result_usuario = "SELECT * FROM projetos ORDER BY id ASC LIMIT $inicio, $qnt_result_pg";
     $resultado_usuario = mysqli_query($conn, $result_usuario);
 }
 
@@ -63,7 +57,7 @@ if(($resultado_usuario) AND ($resultado_usuario->num_rows != 0)){
     </table>
 <?php
 //paginação - somar a quantidade de usuários
-$result_pg = "SELECT COUNT(id) AS num_result FROM camara";
+$result_pg = "SELECT COUNT(id) AS num_result FROM projetos";
 $resultado_pg = mysqli_query($conn, $result_pg);
 $row_pg = mysqli_fetch_assoc($resultado_pg);
 
