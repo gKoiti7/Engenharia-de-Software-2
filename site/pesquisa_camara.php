@@ -13,31 +13,16 @@
 
             <form method="post" action="listar.php" id="myForm">
                 <p>Pesquisar por:</p>
-                <p>- Autor:</p>
                 <div class="form-check ml-5">
                     <input class="form-check-input" type="radio" name="pesquisa" id="ascendente" value="0" checked>
                     <label class="form-check-label" for="pesquisaServidor1">
-                        Nome (A-Z)
+                        Autor (A-Z)
                     </label>
                 </div>
                 <div class="form-check ml-5">
                     <input class="form-check-input" type="radio" name="pesquisa" id="descendente" value="1">
                     <label class="form-check-label" for="pesquisaServidor2">
-                        Nome (Z-A)
-                    </label>
-                </div>
-                <br>
-                <p>- Número do Projeto:</p>
-                <div class="form-check ml-5">
-                    <input class="form-check-input" type="radio" name="pesquisa" id="ascendente" value="2">
-                    <label class="form-check-label" for="pesquisaServidor1">
-                        Mais Recente
-                    </label>
-                </div>
-                <div class="form-check ml-5">
-                    <input class="form-check-input" type="radio" name="pesquisa" id="descendente" value="3">
-                    <label class="form-check-label" for="pesquisaServidor2">
-                        Mais Antigo
+                        Nº de Projeto (+ recente)
                     </label>
                 </div>
 
