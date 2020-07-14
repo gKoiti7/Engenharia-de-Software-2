@@ -23,7 +23,7 @@ conexão = pymysql.connect(
 mycursor = conexão.cursor()
 #Cria nome da coluna que recebera as informaçoes de salario com o dia da consulta
 agora = datetime.datetime.now()
-nome = "`"+"Salario "+str(agora.month)+" "+str(agora.year)+"`"
+nome = "`"+"Salario"+str(agora.month)+""+str(agora.year)+"`"
 
 #Cria coluna que recebera as informaçoes de salario com o dia da consulta
 try:
