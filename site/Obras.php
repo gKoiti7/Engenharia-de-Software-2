@@ -8,8 +8,7 @@ class Obras{
     private $situacao;
     
     public function cadastrarObra(){
-        $host = 'localhost'; $user = 'root'; $passwd = ''; $bd = 'projeto_transparencia'; $port = '3308';
-        $conn = mysqli_connect($host, $user, $passwd, $bd, $port);
+        include('conexao.php');
 
         $query = "INSERT INTO obras (Destino, Datainicio, Datafim, Situacao) VALUES(". $this->getDestino() . ", '" . $this->getDatainicio() . "', '" . $this->getDatafim() . "', " . $this->getSituacao() . ")";
 

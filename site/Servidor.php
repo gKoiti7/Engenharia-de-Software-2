@@ -5,8 +5,7 @@ class Servidor extends Funcionario{
     private $rgf;
 
     public function cadastrarServidor(){
-        $host = 'localhost'; $user = 'root'; $passwd = ''; $bd = 'projeto_transparencia'; $port = '3308';
-        $conn = mysqli_connect($host, $user, $passwd, $bd, $port);
+        include('conexao.php');
 
         $query = "INSERT INTO servidores (RGF, Nome, Cargo, Salario) VALUES(". $this->getRgf() . ", '" . $this->getNome() . "', '" . $this->getCargo() . "', " . $this->getSalario() . ")";
 
@@ -18,8 +17,7 @@ class Servidor extends Funcionario{
     }
 
     public function pesquisarServidor($nome){
-        $host = 'localhost'; $user = 'root'; $passwd = ''; $bd = 'projeto_transparencia'; $port = '3308';
-        $conn = mysqli_connect($host, $user, $passwd, $bd, $port);
+        include('conexao.php');
 
         $query = "SELECT * FROM servidores WHERE Nome LIKE '%$nome%' LIMIT 11";
         $resultado_pesquisa = mysqli_query($conn, $query);
