@@ -101,4 +101,4 @@ echo '</nav>';
     echo "<div class='alert alert-danger' role='alert'> Nenhum usuário encontrado </div>";
 }   
 ?>
-   
+    <input class="btn btn-outline-succes mb-3" type="button" onclick="location.href='pesquisa_camara.php';" value="Voltar" />
